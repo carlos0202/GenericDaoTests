@@ -1,0 +1,11 @@
+c:\users\cagonzalec\documents\visual studio 2013\Projects\GenericDaoTests\GenericDaoTests\bin\Debug\GenericDaoTests.exe.config
+c:\users\cagonzalec\documents\visual studio 2013\Projects\GenericDaoTests\GenericDaoTests\bin\Debug\GenericDaoTests.exe
+c:\users\cagonzalec\documents\visual studio 2013\Projects\GenericDaoTests\GenericDaoTests\bin\Debug\GenericDaoTests.pdb
+c:\users\cagonzalec\documents\visual studio 2013\Projects\GenericDaoTests\GenericDaoTests\bin\Debug\GenericDAL.dll
+c:\users\cagonzalec\documents\visual studio 2013\Projects\GenericDaoTests\GenericDaoTests\bin\Debug\GenericDAL.pdb
+c:\users\cagonzalec\documents\visual studio 2013\Projects\GenericDaoTests\GenericDaoTests\obj\Debug\GenericDaoTests.csprojResolveAssemblyReference.cache
+c:\users\cagonzalec\documents\visual studio 2013\Projects\GenericDaoTests\GenericDaoTests\obj\Debug\GenericDaoTests.FrmGDAOTests.resources
+c:\users\cagonzalec\documents\visual studio 2013\Projects\GenericDaoTests\GenericDaoTests\obj\Debug\GenericDaoTests.Properties.Resources.resources
+c:\users\cagonzalec\documents\visual studio 2013\Projects\GenericDaoTests\GenericDaoTests\obj\Debug\GenericDaoTests.csproj.GenerateResource.Cache
+c:\users\cagonzalec\documents\visual studio 2013\Projects\GenericDaoTests\GenericDaoTests\obj\Debug\GenericDaoTests.exe
+c:\users\cagonzalec\documents\visual studio 2013\Projects\GenericDaoTests\GenericDaoTests\obj\Debug\GenericDaoTests.pdb
