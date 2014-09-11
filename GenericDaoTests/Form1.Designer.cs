@@ -40,6 +40,12 @@
             this.lblValues = new System.Windows.Forms.Label();
             this.IsDirections = new System.Windows.Forms.RadioButton();
             this.IsParameterNames = new System.Windows.Forms.RadioButton();
+            this.gbDirTypes = new System.Windows.Forms.GroupBox();
+            this.gbCommandType = new System.Windows.Forms.GroupBox();
+            this.IsTextCommand = new System.Windows.Forms.RadioButton();
+            this.IsProcedureCommand = new System.Windows.Forms.RadioButton();
+            this.gbDirTypes.SuspendLayout();
+            this.gbCommandType.SuspendLayout();
             this.SuspendLayout();
             // 
             // rtbQuery
@@ -52,7 +58,7 @@
             // 
             // rtbResult
             // 
-            this.rtbResult.Location = new System.Drawing.Point(12, 338);
+            this.rtbResult.Location = new System.Drawing.Point(12, 385);
             this.rtbResult.Name = "rtbResult";
             this.rtbResult.ReadOnly = true;
             this.rtbResult.Size = new System.Drawing.Size(450, 167);
@@ -62,7 +68,7 @@
             // btnTest
             // 
             this.btnTest.Font = new System.Drawing.Font("Eras Medium ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTest.Location = new System.Drawing.Point(374, 278);
+            this.btnTest.Location = new System.Drawing.Point(374, 326);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(88, 31);
             this.btnTest.TabIndex = 2;
@@ -73,7 +79,7 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Eras Medium ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(374, 511);
+            this.btnClear.Location = new System.Drawing.Point(374, 558);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(88, 31);
             this.btnClear.TabIndex = 3;
@@ -94,7 +100,7 @@
             // 
             this.lblResult.AutoSize = true;
             this.lblResult.Font = new System.Drawing.Font("Eras Medium ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult.Location = new System.Drawing.Point(9, 316);
+            this.lblResult.Location = new System.Drawing.Point(9, 364);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(84, 19);
             this.lblResult.TabIndex = 5;
@@ -140,7 +146,7 @@
             // 
             this.IsDirections.AutoSize = true;
             this.IsDirections.Checked = true;
-            this.IsDirections.Location = new System.Drawing.Point(36, 278);
+            this.IsDirections.Location = new System.Drawing.Point(19, 19);
             this.IsDirections.Name = "IsDirections";
             this.IsDirections.Size = new System.Drawing.Size(81, 17);
             this.IsDirections.TabIndex = 10;
@@ -151,7 +157,7 @@
             // IsParameterNames
             // 
             this.IsParameterNames.AutoSize = true;
-            this.IsParameterNames.Location = new System.Drawing.Point(128, 278);
+            this.IsParameterNames.Location = new System.Drawing.Point(111, 19);
             this.IsParameterNames.Name = "IsParameterNames";
             this.IsParameterNames.Size = new System.Drawing.Size(78, 17);
             this.IsParameterNames.TabIndex = 11;
@@ -159,13 +165,58 @@
             this.IsParameterNames.Text = "Parametros";
             this.IsParameterNames.UseVisualStyleBackColor = true;
             // 
+            // gbDirTypes
+            // 
+            this.gbDirTypes.Controls.Add(this.IsDirections);
+            this.gbDirTypes.Controls.Add(this.IsParameterNames);
+            this.gbDirTypes.Location = new System.Drawing.Point(13, 268);
+            this.gbDirTypes.Name = "gbDirTypes";
+            this.gbDirTypes.Size = new System.Drawing.Size(200, 45);
+            this.gbDirTypes.TabIndex = 12;
+            this.gbDirTypes.TabStop = false;
+            this.gbDirTypes.Text = "Direcciones de Parametros";
+            // 
+            // gbCommandType
+            // 
+            this.gbCommandType.Controls.Add(this.IsTextCommand);
+            this.gbCommandType.Controls.Add(this.IsProcedureCommand);
+            this.gbCommandType.Location = new System.Drawing.Point(262, 268);
+            this.gbCommandType.Name = "gbCommandType";
+            this.gbCommandType.Size = new System.Drawing.Size(200, 45);
+            this.gbCommandType.TabIndex = 13;
+            this.gbCommandType.TabStop = false;
+            this.gbCommandType.Text = "Tipo de Comando";
+            // 
+            // IsTextCommand
+            // 
+            this.IsTextCommand.AutoSize = true;
+            this.IsTextCommand.Checked = true;
+            this.IsTextCommand.Location = new System.Drawing.Point(15, 19);
+            this.IsTextCommand.Name = "IsTextCommand";
+            this.IsTextCommand.Size = new System.Drawing.Size(52, 17);
+            this.IsTextCommand.TabIndex = 10;
+            this.IsTextCommand.TabStop = true;
+            this.IsTextCommand.Text = "Texto";
+            this.IsTextCommand.UseVisualStyleBackColor = true;
+            // 
+            // IsProcedureCommand
+            // 
+            this.IsProcedureCommand.AutoSize = true;
+            this.IsProcedureCommand.Location = new System.Drawing.Point(100, 19);
+            this.IsProcedureCommand.Name = "IsProcedureCommand";
+            this.IsProcedureCommand.Size = new System.Drawing.Size(92, 17);
+            this.IsProcedureCommand.TabIndex = 11;
+            this.IsProcedureCommand.TabStop = true;
+            this.IsProcedureCommand.Text = "Procedimiento";
+            this.IsProcedureCommand.UseVisualStyleBackColor = true;
+            // 
             // FrmGDAOTests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 550);
-            this.Controls.Add(this.IsParameterNames);
-            this.Controls.Add(this.IsDirections);
+            this.ClientSize = new System.Drawing.Size(474, 600);
+            this.Controls.Add(this.gbCommandType);
+            this.Controls.Add(this.gbDirTypes);
             this.Controls.Add(this.rtbValues);
             this.Controls.Add(this.lblValues);
             this.Controls.Add(this.rtbDirections);
@@ -180,6 +231,10 @@
             this.Name = "FrmGDAOTests";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generic DAO Tests";
+            this.gbDirTypes.ResumeLayout(false);
+            this.gbDirTypes.PerformLayout();
+            this.gbCommandType.ResumeLayout(false);
+            this.gbCommandType.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,6 +254,10 @@
         private System.Windows.Forms.Label lblValues;
         private System.Windows.Forms.RadioButton IsDirections;
         private System.Windows.Forms.RadioButton IsParameterNames;
+        private System.Windows.Forms.GroupBox gbDirTypes;
+        private System.Windows.Forms.GroupBox gbCommandType;
+        private System.Windows.Forms.RadioButton IsTextCommand;
+        private System.Windows.Forms.RadioButton IsProcedureCommand;
     }
 }
 

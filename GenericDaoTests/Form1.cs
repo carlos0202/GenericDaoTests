@@ -40,15 +40,24 @@ namespace GenericDaoTests
 
                 GenericDAO<OracleCommand, OracleConnection, OracleDataAdapter> dao =
                     new GenericDAO<OracleCommand, OracleConnection, OracleDataAdapter>();
-                var parameters = DBUtils.getParameterNames(rtbQuery.Text);
+                dynamic parameters = "";
+
+                if (IsTextCommand.Checked)
+                {
+                    dao.FillCommand(rtbQuery.Text, values.ToArray(), directions);
+                    parameters = DBUtils.getParameterNames(rtbQuery.Text);
+                }
+                else
+                {
+                    var prms = rtbQuery.Text.Split('&');
+                    var procedureName = prms[0];
+                    parameters = prms[1];
+                    dao.LoadCommandObj(procedureName, values.ToArray(), directions, true, parameters);
+                }
+                
                 String result = "";
                 result += string.Format("Query: \n {0} \n", rtbQuery.Text);
-                result += "\nValores Parametrizados:\n";
-                foreach (String val in parameters)
-                {
-                    result += string.Format("{0}\t", val); 
-                }
-                dao.FillCommand(rtbQuery.Text, values.ToArray(), directions);
+
                 result += "\nValores producidos en DbParameter\n\n";
                 foreach (OracleParameter parameter in dao.Command.Parameters)
                 {
