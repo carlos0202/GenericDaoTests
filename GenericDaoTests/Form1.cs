@@ -45,14 +45,14 @@ namespace GenericDaoTests
                 if (IsTextCommand.Checked)
                 {
                     dao.FillCommand(rtbQuery.Text, values.ToArray(), directions);
-                    parameters = DBUtils.getParameterNames(rtbQuery.Text);
+                    parameters = DBUtils.getParameterNames<OracleCommand>(rtbQuery.Text);
                 }
                 else
                 {
                     var prms = rtbQuery.Text.Split('&');
                     var procedureName = prms[0];
                     parameters = prms[1];
-                    dao.LoadCommandObj(procedureName, values.ToArray(), directions, true, parameters);
+                    dao.FillCommand(procedureName, values.ToArray(), parameters, directions);
                 }
                 
                 String result = "";
