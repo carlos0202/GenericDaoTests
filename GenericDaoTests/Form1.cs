@@ -22,7 +22,7 @@ namespace GenericDaoTests
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(rtbQuery.Text) || String.IsNullOrEmpty(rtbValues.Text) || String.IsNullOrEmpty(rtbDirections.Text))
+            if (String.IsNullOrEmpty(rtbQuery.Text) || String.IsNullOrEmpty(rtbValues.Text))
             {
                 MessageBox.Show("favor introducir todos los datos");
             }
@@ -37,7 +37,7 @@ namespace GenericDaoTests
                     values.Add(Convert.ChangeType(value[0],type));
                 }
                 var directions = rtbDirections.Text.Split(',');
-
+                directions = (directions.Count() == 0 || directions[0] == "") ? null : directions;
                 GenericDAO<OracleCommand, OracleConnection, OracleDataAdapter> dao =
                     new GenericDAO<OracleCommand, OracleConnection, OracleDataAdapter>();
                 dynamic parameters = "";
